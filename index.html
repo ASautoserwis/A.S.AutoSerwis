@@ -97,20 +97,62 @@
         <li>Naprawa rozrusznika: od 260 zł</li>
         <li>Wymiana alternatora: od 260 zł</li>
         <li>Wymiana akumulatora: od 40 zł</li>
+        <li>Wymiana żarówki: od 20 zł</li>
+        <li>Wymiana mechanizmu podnoszenia szyby: od 260 zł</li>
     </ul>
 
     <h3>MECHANIKA SAMOCHODOWA</h3>
+    <h4>Układ hamulcowy</h4>
     <ul class="price-list">
         <li>Wymiana klocków hamulcowych (przód): od 150 zł</li>
         <li>Wymiana klocków hamulcowych (tył): od 150 zł</li>
-        <li>Wymiana rozrządu: od 650 zł</li>
+        <li>Wymiana szczęk hamulcowych: od 180 zł/str</li>
+        <li>Wymiana szczęk hamulcowych + cylinderków: od 240 zł/str</li>
+        <li>Wymiana klocków + tarcz hamulcowych (przód): od 320 zł/kpl.</li>
+        <li>Wymiana klocków + tarcz hamulcowych (tył): od 320 zł/kpl.</li>
+        <li>Wymiana zaciska hamulcowego: od 120 zł/str.</li>
+        <li>Wymiana zestawu naprawczego zaciska hamulcowego: 180 - 220 zł/str.</li>
+        <li>Bęben hamulcowy - wymiana (1 szt.): 50 - 80 zł/str.</li>
+        <li>Wymiana cylinderka hamulca: od 90 zł/str.</li>
+        <li>Czujnik ABS - wymiana (przód): od 90 zł/str.</li>
+        <li>Czujnik ABS - wymiana (tył): od 90 zł/str.</li>
+        <li>Wymiana płynu hamulcowego (wraz z płynem firmy ATE): 240 zł</li>
+    </ul>
+
+    <h4>Układ napędowy, silnik</h4>
+    <ul class="price-list">
+        <li>Wymiana paska wielorowkowego: od 120 zł</li>
+        <li>Wymiana rozrządu (zależnie od typu silnika): od 650 zł</li>
         <li>Wymiana sprzęgła: od 650 zł</li>
+        <li>Wymiana pompy paliwa: od 180 zł</li>
+        <li>Wymiana termostatu: od 140 zł</li>
+        <li>Wymiana pompy wody: od 360 zł</li>
+        <li>Wymiana uszczelki pod głowicą: od 3 200 zł</li>
+        <li>Wymiana uszczelki miski oleju: od 220 zł</li>
+        <li>Wymiana przegubu napędowego (zewn.): od 190 zł</li>
+        <li>Wymiana przegubu napędowego (wewn.): od 190 zł</li>
+    </ul>
+
+    <h3>Tłumiki, układ wydechowy</h3>
+    <ul class="price-list">
+        <li>Wymiana tłumika końcowego: od 110 zł</li>
+        <li>Wymiana tłumika środkowego: od 120 zł</li>
+        <li>Wymiana sondy lambda: od 120 zł</li>
+    </ul>
+
+    <h3>Filtry, olej i płyny</h3>
+    <ul class="price-list">
+        <li>Wymiana filtra powietrza: 30 - 50 zł</li>
+        <li>Wymiana filtra kabinowego: 30 - 60 zł</li>
+        <li>Wymiana filtra paliwa: 70 - 120 zł</li>
+        <li>Wymiana oleju silnikowego i filtra oleju: od 140 zł</li>
+        <li>Wymiana oleju w skrzyni biegów: 120 zł manualna</li>
+        <li>Wymiana płynu w chłodnicy: 120 - 160 zł</li>
     </ul>
 
     <h3>DIAGNOSTYKA I PRZEGLĄDY</h3>
     <ul class="price-list">
         <li>Diagnostyka komputerowa: 150 - 250 zł</li>
-        <li>Przegląd okresowy: od 100 zł</li>
         <li>Przegląd przed kupnem/sprzedażą: 150 zł</li>
     </ul>
 </section>
@@ -151,34 +193,27 @@
 
         <label for="service">Usługa:</label><br>
         <select id="service" name="service">
-            <option value="diagnostyka">Diagnostyka komputerowa</option>
-            <option value="naprawa_silnika">Naprawa silnika</option>
-            <option value="wymiana_oleju">Wymiana oleju</option>
-            <option value="wymiana_swiec">Wymiana świec zapłonowych</option>
+            <option value="mechanical">Naprawa mechaniczna</option>
+            <option value="electrical">Naprawa elektryczna</option>
+            <option value="diagnostics">Diagnostyka komputerowa</option>
         </select><br><br>
 
-        <input type="submit" value="Zarezerwuj wizytę">
+        <input type="submit" value="Zarezerwuj">
     </form>
 </section>
 
 <footer>
-    <p>&copy; 2025 A.S.AutoSerwis. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2025 A.S.AutoSerwis</p>
 </footer>
 
 <script>
     function showTab(tabId) {
-        // Скрываем все вкладки
-        var tabs = document.querySelectorAll('.tab-content');
-        tabs.forEach(function(tab) {
-            tab.classList.remove('active');
-        });
-        
-        // Показываем выбранную вкладку
-        var activeTab = document.getElementById(tabId);
-        activeTab.classList.add('active');
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
     }
 
-    // Показываем вкладку Usługi по умолчанию
+    // Default to showing the "Usługi" tab
     showTab('services');
 </script>
 
