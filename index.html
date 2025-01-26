@@ -55,6 +55,12 @@
             display: flex;
             justify-content: space-around;
         }
+        .tab-content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -65,12 +71,13 @@
 </header>
 
 <nav>
-    <a href="#services">Usługi</a>
-    <a href="#prices">Cennik</a>
-    <a href="#contact">Kontakt</a>
+    <a href="#" onclick="showTab('services')">Usługi</a>
+    <a href="#" onclick="showTab('prices')">Cennik</a>
+    <a href="#" onclick="showTab('contact')">Kontakt</a>
+    <a href="#" onclick="showTab('reservation')">Rezerwacja</a>
 </nav>
 
-<section id="services">
+<section id="services" class="tab-content">
     <h2>Nasze Usługi</h2>
     <ul>
         <li>🔧 Naprawa silnika</li>
@@ -80,7 +87,7 @@
     </ul>
 </section>
 
-<section id="prices">
+<section id="prices" class="tab-content">
     <h2>Cennik</h2>
     <h3>ELEKTROMECHANIKA</h3>
     <ul class="price-list">
@@ -108,7 +115,7 @@
     </ul>
 </section>
 
-<section id="contact">
+<section id="contact" class="tab-content">
     <h2>Kontakt</h2>
     <div class="contact-info">
         <div>
@@ -126,9 +133,54 @@
     </div>
 </section>
 
+<section id="reservation" class="tab-content">
+    <h2>Rezerwacja</h2>
+    <p>Aby umówić wizytę, prosimy wypełnić formularz poniżej:</p>
+    <form>
+        <label for="name">Imię i Nazwisko:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="phone">Telefon:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <label for="date">Data wizyty:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="service">Usługa:</label><br>
+        <select id="service" name="service">
+            <option value="diagnostyka">Diagnostyka komputerowa</option>
+            <option value="naprawa_silnika">Naprawa silnika</option>
+            <option value="wymiana_oleju">Wymiana oleju</option>
+            <option value="wymiana_swiec">Wymiana świec zapłonowych</option>
+        </select><br><br>
+
+        <input type="submit" value="Zarezerwuj wizytę">
+    </form>
+</section>
+
 <footer>
     <p>&copy; 2025 A.S.AutoSerwis. Wszelkie prawa zastrzeżone.</p>
 </footer>
+
+<script>
+    function showTab(tabId) {
+        // Скрываем все вкладки
+        var tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        
+        // Показываем выбранную вкладку
+        var activeTab = document.getElementById(tabId);
+        activeTab.classList.add('active');
+    }
+
+    // Показываем вкладку Usługi по умолчанию
+    showTab('services');
+</script>
 
 </body>
 </html>
