@@ -8,41 +8,28 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            color: #333;
             margin: 0;
             padding: 0;
         }
         header {
             background-color: #b30000;
-            color: white;
             text-align: center;
+            color: white;
             padding: 20px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        header p {
-            font-size: 18px;
-        }
         nav {
+            display: flex;
+            justify-content: center;
             background-color: #333;
-            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
             text-align: center;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
+        nav a:hover {
+            background-color: #575757;
         }
         section {
             padding: 20px;
@@ -50,37 +37,23 @@
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            color: #b30000;
-            font-size: 28px;
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #b30000;
+            color: white;
         }
         .price-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            list-style: none;
+            padding: 0;
         }
-        .service-item {
-            padding: 15px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        .price-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
         }
-        .service-item h3 {
-            margin-top: 0;
-            color: #b30000;
-            font-size: 20px;
-        }
-        .service-item p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 30px;
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
         }
     </style>
 </head>
@@ -92,67 +65,65 @@
 </header>
 
 <nav>
-    <ul>
-        <li><a href="#services">Usługi</a></li>
-        <li><a href="#prices">Cennik</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-    </ul>
+    <a href="#services">Usługi</a>
+    <a href="#prices">Cennik</a>
+    <a href="#contact">Kontakt</a>
 </nav>
 
 <section id="services">
     <h2>Nasze Usługi</h2>
-    <p>Oferujemy szeroki zakres usług w zakresie naprawy samochodów. Sprawdź naszą ofertę!</p>
+    <ul>
+        <li>🔧 Naprawa silnika</li>
+        <li>🔌 Elektryka samochodowa</li>
+        <li>🛢 Wymiana oleju</li>
+        <li>🧰 Diagnostyka komputerowa</li>
+    </ul>
 </section>
 
 <section id="prices">
-    <h2>Usługi i Cennik A.S.AutoSerwis</h2>
-    <div class="price-list">
+    <h2>Cennik</h2>
+    <h3>ELEKTROMECHANIKA</h3>
+    <ul class="price-list">
+        <li>Wymiana świec zapłonowych: od 80 zł/kpl.</li>
+        <li>Wymiana świec żarowych: od 80 zł/szt.</li>
+        <li>Wymiana rozrusznika: od 180 zł</li>
+        <li>Naprawa rozrusznika: od 260 zł</li>
+        <li>Wymiana alternatora: od 260 zł</li>
+        <li>Wymiana akumulatora: od 40 zł</li>
+    </ul>
 
-        <!-- Elektromechanika -->
-        <div class="service-item">
-            <h3>Elekromechanika</h3>
-            <p>Wymiana świec zapłonowych od 80zł/kpl.</p>
-            <p>Wymiana świec żarowych od 80 zł/szt.</p>
-            <p>Wymiana rozrusznika (demontaż / montaż) od 180 zł</p>
-            <p>Naprawa rozrusznika od 260 zł</p>
-            <p>Wymiana alternatora (demontaż / montaż) od 260 zł</p>
-            <p>Wymiana przewodów zapłonowych od 60 zł</p>
-            <p>Wymiana akumulatora od 40 zł</p>
-            <p>Wymiana żarówki od 20 zł</p>
-            <p>Wymiana mechanizmu podnoszenia szyby od 260 zł</p>
-        </div>
+    <h3>MECHANIKA SAMOCHODOWA</h3>
+    <ul class="price-list">
+        <li>Wymiana klocków hamulcowych (przód): od 150 zł</li>
+        <li>Wymiana klocków hamulcowych (tył): od 150 zł</li>
+        <li>Wymiana rozrządu: od 650 zł</li>
+        <li>Wymiana sprzęgła: od 650 zł</li>
+    </ul>
 
-        <!-- Mechanika Samochodowa -->
-        <div class="service-item">
-            <h3>Mechanika Samochodowa</h3>
-            <h4>Układ hamulcowy</h4>
-            <p>Wymiana klocków hamulcowych - przód od 150 zł/kpl.</p>
-            <p>Wymiana klocków hamulcowych - tył od 150 zł/kpl.</p>
-            <p>Wymiana szczęk hamulcowych od 180 zł/str</p>
-            <p>Wymiana tarcz hamulcowych przód od 320 zł/kpl.</p>
-            <h4>Zawieszenie, układ kierowniczy</h4>
-            <p>Ustawianie geometrii kół od 250 zł</p>
-            <p>Wymiana amortyzatorów od 220 zł/str</p>
-            <h4>Układ napędowy, silnik</h4>
-            <p>Wymiana paska wielorowkowego od 120 zł</p>
-            <p>Wymiana rozrządu od 650 zł</p>
-        </div>
-
-        <!-- Diagnostyka i przeglądy -->
-        <div class="service-item">
-            <h3>Diagnostyka i Przeglądy</h3>
-            <p>Diagnostyka komputerowa - 150 - 250 zł</p>
-            <p>Przegląd przed kupną/sprzedażą - 150 zł</p>
-        </div>
-
-    </div>
+    <h3>DIAGNOSTYKA I PRZEGLĄDY</h3>
+    <ul class="price-list">
+        <li>Diagnostyka komputerowa: 150 - 250 zł</li>
+        <li>Przegląd okresowy: od 100 zł</li>
+        <li>Przegląd przed kupnem/sprzedażą: 150 zł</li>
+    </ul>
 </section>
 
 <section id="contact">
     <h2>Kontakt</h2>
-    <p>📍 Adres: Krzemieniecka 41</p>
-    <p>📞 Telefon: +48 575 047 865</p>
-    <p>📧 Email: kontakt@asautoserwis.pl</p>
+    <div class="contact-info">
+        <div>
+            <h3>Adres</h3>
+            <p>ul. Krzemieniecka 41</p>
+        </div>
+        <div>
+            <h3>Telefon</h3>
+            <p>+48 575 047 865</p>
+        </div>
+        <div>
+            <h3>Email</h3>
+            <p><a href="mailto:antach_77@ukr.net">antach_77@ukr.net</a></p>
+        </div>
+    </div>
 </section>
 
 <footer>
