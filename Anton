@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.S.AutoSerwis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>A.S.AutoSerwis</h1>
+        <p>Profesjonalna naprawa samochodów – Twoje auto w dobrych rękach!</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#services">Usługi</a></li>
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    
+    <section id="services">
+        <h2>Nasze Usługi</h2>
+        <ul>
+            <li>🔍 Diagnostyka</li>
+            <li>🔧 Naprawa silnika</li>
+            <li>🚗 Wymiana opon i wyważanie</li>
+            <li>🛢 Wymiana oleju i filtrów</li>
+            <li>⚡ Elektryka i diagnostyka komputerowa</li>
+        </ul>
+    </section>
+    
+    <section id="about">
+        <h2>O nas</h2>
+        <p>Doświadczony zespół mechaników, najlepsza jakość usług i gwarancja satysfakcji.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>📍 Adres: Krzemieniecka 41</p>
+        <p>📞 Telefon: +48 575 047 865</p>
+        <p>📧 Email: kontakt@asautoserwis.pl</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 A.S.AutoSerwis. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b30000;
+            text-align: center;
+            padding: 20px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            background-color: #333;
+        }
+        nav ul li {
+            margin: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #b30000;
+        }
+    </style>
+</body>
+</html>
