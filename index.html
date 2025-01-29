@@ -6,26 +6,40 @@
     <title>A.S.AutoSerwis</title>
     <style>
         body {
-         background-image: url('https://celes.club/uploads/posts/2022-05/1653377505_10-celes-club-p-fon-dlya-vizitki-avtoservisa-krasivie-11.jpg'); /* Шлях до вашого зображення */
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-            font-family: Georgia, sans-serif;
+    background-image: url('https://img1.wsimg.com/isteam/ip/b0bffae3-75ee-4bbd-a9f0-c2233147c23d/AdobeStock_542132719.jpeg');
+    background-size: cover; /* Це дозволяє зображенню покривати весь екран */
+    background-position: center center; /* Центрує зображення, щоб важливі частини були в центрі */
+    background-attachment: fixed; /* Фіксувати фон при прокручуванні */
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black; /* Колір тексту */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: auto 100%; /* На маленьких екранах зображення буде адаптуватися по висоті */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: auto 100%; /* Зображення адаптується по висоті на дуже малих екранах */
+    }
+}
+        h1 {
+            font-family: 'Georgia', sans-serif;
+            font-size: 6vw; /* Зменшено розмір шрифта */
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9); /* Тінь для заголовка */
             margin: 0;
             padding: 0;
-            color: black; /* Колір тексту */
         }
-        h1 {
-            text-align: center;
-            margin-top: 200px;
-            font-size: 50px;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.7);
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
+       header {
+    background-color: rgba(211, 47, 47, 0.5); /* Вишнева прозора тінь для шапки */
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
         nav {
             display: flex;
             justify-content: center;
@@ -43,7 +57,7 @@
         section {
             padding: 20px;
             margin: 20px;
-            background-color: rgba(128, 128, 128, 0.9);
+            background-color: rgba(288, 288, 288, 0.6);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
@@ -65,8 +79,20 @@
             color: red;
         }
         .contact-info {
-            display: flex;
-            justify-content: space-around;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .contact-info div {
+            margin-bottom: 15px;
+        }
+        .contact-info h3 {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline;
+        }
+        .contact-info p {
+            display: inline;
+            margin: 0;
         }
         .tab-content {
             display: none;
@@ -102,6 +128,7 @@
     <h2>Nasze Usługi</h2>
     <ul>
         <li>🔧 Naprawa silnika</li>
+        <li>🔌 Elektryka samochodowa</li>
         <li>🛢 Wymiana oleju</li>
         <li>🧰 Diagnostyka komputerowa</li>
         <li>🚗 Układ hamulcowy</li>
@@ -114,9 +141,9 @@
 </section>
 
 <section id="prices" class="tab-content">
-    <h2>Cennik</h2>
-
-    <h3>ELEKTROMECHANIKA</h3>
+    <h2 style="text-align: center; font-size: 40px; font-weight: bold;">Cennik</h2>
+    
+    <h3 style="text-align: center; font-size: 25px; font-weight: bold;">ELEKTROMECHANIKA</h3>
     <ul class="price-list">
         <li>Wymiana świec zapłonowych <span>od 80 zł/kpl.</span></li>
         <li>Wymiana świec żarowych <span>od 80 zł/szt.</span></li>
@@ -128,8 +155,9 @@
         <li>Wymiana mechanizmu podnoszenia szyby <span>od 260 zł</span></li>
     </ul>
 
-<h3>MECHANIKA SAMOCHODOWA</h3>
-    <h4>Układ hamulcowy</h4>
+    <h3 style="text-align: center; font-size: 25px; font-weight: bold;">MECHANIKA SAMOCHODOWA</h3>
+    
+    <h4 style="font-size: 25px; font-weight: bold;">Układ hamulcowy</h4>
     <ul class="price-list">
         <li>Wymiana klocków hamulcowych (przód) <span>od 150 zł/kpl.</span></li>
         <li>Wymiana klocków hamulcowych (tył) <span>od 150 zł/kpl.</span></li>
@@ -151,7 +179,7 @@
         <li>Wymiana płynu hamulcowego <span>200 zł</span></li>
     </ul>
 
-    <h4>ZAWIESZENIE I UKŁAD KIEROWNICZY</h4>
+    <h4 style="font-size: 25px; font-weight: bold;">Zawieszenie i układ kierowniczy</h4>
     <ul class="price-list">
         <li>Wymiana tulejek stabilizatora (przód) <span>od 140 zł/kpl.</span></li>
         <li>Wymiana tulejek stabilizatora (tył) <span>od 140 zł/kpl.</span></li>
@@ -167,7 +195,7 @@
         <li>Wymiana sprężyny zawieszenia (tył) <span>od 90 zł/str.</span></li>
     </ul>
 
-    <h4>UKŁAD NAPĘDOWY I SILNIK</h4>
+    <h4 style="font-size: 25px; font-weight: bold;">Układ napędowy i silnik</h4>
     <ul class="price-list">
         <li>Wymiana paska wielorowkowego <span>od 120 zł</span></li>
         <li>Wymiana rozrządu <span>od 800 zł</span></li>
@@ -182,7 +210,7 @@
         <li>Wymiana osłony przegubu napędowego <span>od 190 zł</span></li>
     </ul>
 
-    <h3>FILTRY, OLEJ I PŁYNY</h3>
+    <h3 style="font-size: 25px; font-weight: bold;">Filtry, olej i płyny</h3>
     <ul class="price-list">
         <li>Wymiana filtra powietrza <span>30 - 50 zł</span></li>
         <li>Wymiana filtra kabinowego <span>30 - 60 zł</span></li>
@@ -192,7 +220,7 @@
         <li>Wymiana płynu w chłodnicy <span>120 - 160 zł</span></li>
     </ul>
 
-    <h3>DIAGNOSTYKA I PRZEGLĄDY</h3>
+    <h3 style="text-align: center; font-size: 25px; font-weight: bold;">DIAGNOSTYKA I PRZEGLĄDY</h3>
     <ul class="price-list">
         <li>Diagnostyka komputerowa <span>150 - 250 zł</span></li>
         <li>Przegląd przed kupnem/sprzedażą <span>150 zł</span></li>
@@ -203,16 +231,13 @@
     <h2>Kontakt</h2>
     <div class="contact-info">
         <div>
-            <h3>Adres</h3>
-            <p>ul. Krzemieniecka 41, Wrocław</p>
+            <h3>Adres:</h3><p> ul. Krzemieniecka 41, Wrocław</p>
         </div>
         <div>
-            <h3>Telefon</h3>
-            <p>+48 575 047 865</p>
+            <h3>Telefon:</h3><p> +48 575 047 865</p>
         </div>
         <div>
-            <h3>Email</h3>
-            <p><a href="mailto:antach_77@ukr.net" style="color: black; text-decoration: underline;">antach_77@ukr.net</a></p>
+            <h3>Email: </h3><p><a href="mailto:antach_77@ukr.net" style="color: black; text-decoration: underline;">antach_77@ukr.net</a></p>
         </div>
     </div>
 
@@ -238,4 +263,4 @@
 </script>
 
 </body>
-</html> 
+</html>
