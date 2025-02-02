@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.S.AutoSerwis</title>
     <style>
-        body {
+       body {
     background-image: url('https://img1.wsimg.com/isteam/ip/b0bffae3-75ee-4bbd-a9f0-c2233147c23d/AdobeStock_542132719.jpeg');
     background-size: cover; /* Це дозволяє зображенню покривати весь екран */
     background-position: center center; /* Центрує зображення, щоб важливі частини були в центрі */
@@ -18,15 +18,16 @@
 
 @media (max-width: 768px) {
     body {
-        background-size: auto 100%; /* На маленьких екранах зображення буде адаптуватися по висоті */
+        background-size: cover; /* На маленьких екранах зображення буде покривати екран */
     }
 }
 
 @media (max-width: 480px) {
     body {
-        background-size: auto 100%; /* Зображення адаптується по висоті на дуже малих екранах */
+        background-size: cover; /* Зображення покриває екран навіть на дуже малих екранах */
     }
 }
+
         h1 {
             font-family: 'Georgia', sans-serif;
             font-size: 6vw; /* Зменшено розмір шрифта */
@@ -233,9 +234,9 @@
         <div>
             <h3>Adres:</h3><p> ul. Krzemieniecka 41, Wrocław</p>
         </div>
-        <div>
-            <h3>Telefon:</h3><p> +48 575 047 865</p>
-        </div>
+       <div>
+    <h3>Telefon:</h3><p><a href="tel:+48575047865" style="color: black; text-decoration: underline;">+48 575 047 865</a></p>
+</div>
         <div>
             <h3>Email: </h3><p><a href="mailto:antach_77@ukr.net" style="color: black; text-decoration: underline;">antach_77@ukr.net</a></p>
         </div>
