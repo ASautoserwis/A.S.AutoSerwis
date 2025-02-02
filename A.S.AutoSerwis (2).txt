@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.S.AutoSerwis</title>
+    <style>
+       body {
+    background-image: url('https://img1.wsimg.com/isteam/ip/b0bffae3-75ee-4bbd-a9f0-c2233147c23d/AdobeStock_542132719.jpeg');
+    background-size: cover; /* Це дозволяє зображенню покривати весь екран */
+    background-position: center center; /* Центрує зображення, щоб важливі частини були в центрі */
+    background-attachment: fixed; /* Фіксувати фон при прокручуванні */
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black; /* Колір тексту */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* На маленьких екранах зображення буде покривати екран */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover; /* Зображення покриває екран навіть на дуже малих екранах */
+    }
+}
+
+        h1 {
+            font-family: 'Georgia', sans-serif;
+            font-size: 6vw; /* Зменшено розмір шрифта */
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9); /* Тінь для заголовка */
+            margin: 0;
+            padding: 0;
+        }
+       header {
+    background-color: rgba(211, 47, 47, 0.5); /* Вишнева прозора тінь для шапки */
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(288, 288, 288, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        .price-list {
+            list-style: none;
+            padding: 0;
+        }
+        .price-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .price-list li span {
+            color: red;
+        }
+        .contact-info {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .contact-info div {
+            margin-bottom: 15px;
+        }
+        .contact-info h3 {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline;
+        }
+        .contact-info p {
+            display: inline;
+            margin: 0;
+        }
+        .tab-content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .map-container {
+            margin-top: 20px;
+            border: 2px solid #ddd;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>A.S.AutoSerwis</h1>
+    <p>Profesjonalna naprawa samochodów – Twoje auto w dobrych rękach!</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showTab('services')">Usługi</a>
+    <a href="#" onclick="showTab('prices')">Cennik</a>
+    <a href="#" onclick="showTab('contact')">Kontakt</a>
+</nav>
+
+<section id="services" class="tab-content">
+    <h2>Nasze Usługi</h2>
+    <ul>
+        <li>🔧 Naprawa silnika</li>
+        <li>🔌 Elektryka samochodowa</li>
+        <li>🛢 Wymiana oleju</li>
+        <li>🧰 Diagnostyka komputerowa</li>
+        <li>🚗 Układ hamulcowy</li>
+        <li>🔩 Układ kierowniczy i zawieszenie</li>
+        <li>🔧 Układ napędowy i silnik</li>
+        <li>🛠 Wymiana tłumika</li>
+        <li>💡 Filtry, olej i płyny</li>
+        <li>📊 Diagnostyka i przeglądy</li>
+    </ul>
+</section>
+
+<section id="prices" class="tab-content">
+    <h2 style="text-align: center; font-size: 40px; font-weight: bold;">Cennik</h2>
+    
+    <h3 style="text-align: center; font-size: 25px; font-weight: bold;">ELEKTROMECHANIKA</h3>
+    <ul class="price-list">
+        <li>Wymiana świec zapłonowych <span>od 80 zł/kpl.</span></li>
+        <li>Wymiana świec żarowych <span>od 80 zł/szt.</span></li>
+        <li>Wymiana rozrusznika (demontaż / montaż) <span>od 180 zł</span></li>
+        <li>Wymiana alternatora (demontaż / montaż) <span>od 260 zł</span></li>
+        <li>Wymiana przewodów zapłonowych <span>od 60 zł</span></li>
+        <li>Wymiana akumulatora <span>od 40 zł</span></li>
+        <li>Wymiana żarówki <span>od 20 zł</span></li>
+        <li>Wymiana mechanizmu podnoszenia szyby <span>od 260 zł</span></li>
+    </ul>
+
+    <h3 style="text-align: center; font-size: 25px; font-weight: bold;">MECHANIKA SAMOCHODOWA</h3>
+    
+    <h4 style="font-size: 25px; font-weight: bold;">Układ hamulcowy</h4>
+    <ul class="price-list">
+        <li>Wymiana klocków hamulcowych (przód) <span>od 150 zł/kpl.</span></li>
+        <li>Wymiana klocków hamulcowych (tył) <span>od 150 zł/kpl.</span></li>
+        <li>Wymiana szczęk hamulcowych <span>od 180 zł/str</span></li>
+        <li>Wymiana szczęk hamulcowych + cylinderków <span>od 240 zł/str</span></li>
+        <li>Wymiana klocków + tarcz hamulcowych (przód) <span>od 320 zł/kpl.</span></li>
+        <li>Wymiana klocków + tarcz hamulcowych (tył) <span>od 320 zł/kpl.</span></li>
+        <li>Wymiana zacisku hamulcowego <span>od 120 zł/str.</span></li>
+        <li>Wymiana zestawu naprawczego zacisku hamulcowego <span>180 - 220 zł/str.</span></li>
+        <li>Wymiana bębna hamulcowego (1 szt.) <span>50 - 80 zł/str.</span></li>
+        <li>Wymiana cylinderka hamulca <span>od 90 zł/str.</span></li>
+        <li>Wymiana czujnika ABS (przód) <span>od 90 zł/str.</span></li>
+        <li>Wymiana czujnika ABS (tył) <span>od 90 zł/str.</span></li>
+        <li>Wymiana pompy hamulcowej <span>od 280 zł</span></li>
+        <li>Wymiana przewodu hamulcowego (metalowy) <span>od 280 zł</span></li>
+        <li>Wymiana przewodu hamulcowego (elastyczny) <span>80 zł/szt.</span></li>
+        <li>Wymiana linki hamulca ręcznego <span>od 250 zł/szt.</span></li>
+        <li>Regulacja hamulca ręcznego <span>90 - 160 zł</span></li>
+        <li>Wymiana płynu hamulcowego <span>200 zł</span></li>
+    </ul>
+
+    <h4 style="font-size: 25px; font-weight: bold;">Zawieszenie i układ kierowniczy</h4>
+    <ul class="price-list">
+        <li>Wymiana tulejek stabilizatora (przód) <span>od 140 zł/kpl.</span></li>
+        <li>Wymiana tulejek stabilizatora (tył) <span>od 140 zł/kpl.</span></li>
+        <li>Wymiana łącznika stabilizatora (przód) <span>od 140 zł/kpl.</span></li>
+        <li>Wymiana łącznika stabilizatora (tył) <span>od 140 zł/kpl.</span></li>
+        <li>Wymiana wahacza <span>120 - 200 zł/str.</span></li>
+        <li>Wymiana sworznia wahacza <span>80 - 180 zł/szt.</span></li>
+        <li>Wymiana drążka kierowniczego <span>od 140 zł/str.</span></li>
+        <li>Wymiana końcówki drążka kierowniczego <span>od 60 zł/str.</span></li>
+        <li>Wymiana amortyzatora (przód) <span>od 220 zł/str.</span></li>
+        <li>Wymiana amortyzatora (tył) <span>od 90 zł/str.</span></li>
+        <li>Wymiana sprężyny zawieszenia (przód) <span>od 220 zł/str.</span></li>
+        <li>Wymiana sprężyny zawieszenia (tył) <span>od 90 zł/str.</span></li>
+    </ul>
+
+    <h4 style="font-size: 25px; font-weight: bold;">Układ napędowy i silnik</h4>
+    <ul class="price-list">
+        <li>Wymiana paska wielorowkowego <span>od 120 zł</span></li>
+        <li>Wymiana rozrządu <span>od 800 zł</span></li>
+        <li>Wymiana sprzęgła <span>od 700 zł</span></li>
+        <li>Wymiana pompy paliwa <span>od 180 zł</span></li>
+        <li>Wymiana termostatu <span>od 140 zł</span></li>
+        <li>Wymiana pompy wody <span>od 360 zł</span></li>
+        <li>Wymiana uszczelki pod głowicą <span>od 3 200 zł</span></li>
+        <li>Wymiana uszczelki miski oleju <span>od 220 zł</span></li>
+        <li>Wymiana przegubu napędowego (zewn.) <span>od 190 zł</span></li>
+        <li>Wymiana przegubu napędowego (wewn.) <span>od 190 zł</span></li>
+        <li>Wymiana osłony przegubu napędowego <span>od 190 zł</span></li>
+    </ul>
+
+    <h3 style="font-size: 25px; font-weight: bold;">Filtry, olej i płyny</h3>
+    <ul class="price-list">
+        <li>Wymiana filtra powietrza <span>30 - 50 zł</span></li>
+        <li>Wymiana filtra kabinowego <span>30 - 60 zł</span></li>
+        <li>Wymiana filtra paliwa <span>50 - 120 zł</span></li>
+        <li>Wymiana oleju silnikowego i filtra oleju <span>od 140 zł</span></li>
+        <li>Wymiana oleju w skrzyni biegów <span>120 zł</span></li>
+        <li>Wymiana płynu w chłodnicy <span>120 - 160 zł</span></li>
+    </ul>
+
+    <h3 style="text-align: center; font-size: 25px; font-weight: bold;">DIAGNOSTYKA I PRZEGLĄDY</h3>
+    <ul class="price-list">
+        <li>Diagnostyka komputerowa <span>150 - 250 zł</span></li>
+        <li>Przegląd przed kupnem/sprzedażą <span>150 zł</span></li>
+    </ul>
+</section>
+
+<section id="contact" class="tab-content">
+    <h2>Kontakt</h2>
+    <div class="contact-info">
+        <div>
+            <h3>Adres:</h3><p> ul. Krzemieniecka 41, Wrocław</p>
+        </div>
+       <div>
+    <h3>Telefon:</h3><p><a href="tel:+48575047865" style="color: black; text-decoration: underline;">+48 575 047 865</a></p>
+</div>
+        <div>
+            <h3>Email: </h3><p><a href="mailto:antach_77@ukr.net" style="color: black; text-decoration: underline;">antach_77@ukr.net</a></p>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <h3>Nasza lokalizacja</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2533.0294652897055!2d17.04037061473339!3d51.09862397959286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc174d7b4152b%3A0x74ccfc285233bc1!2sKrzemieniecka%2041%2C%2051-661%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1674749232585!5m2!1spl!2spl" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 A.S.AutoSerwis</p>
+</footer>
+
+<script>
+    function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+    }
+
+    // Default to showing the "Usługi" tab
+    showTab('services');
+</script>
+
+</body>
+</html>
