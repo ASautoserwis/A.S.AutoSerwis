@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.S.AutoSerwis</title>
     <style>
-       body {
+     body {
     background-image: url('https://img1.wsimg.com/isteam/ip/b0bffae3-75ee-4bbd-a9f0-c2233147c23d/AdobeStock_542132719.jpeg');
-    background-size: cover; /* Це дозволяє зображенню покривати весь екран */
-    background-position: center center; /* Центрує зображення, щоб важливі частини були в центрі */
-    background-attachment: fixed; /* Фіксувати фон при прокручуванні */
+    background-size: cover; /* Зображення покриває весь екран */
+    background-position: center center; /* Центрує зображення */
+    background-attachment: fixed; /* Фіксує фон при прокручуванні */
     font-family: Georgia, sans-serif;
     margin: 0;
     padding: 0;
     color: black; /* Колір тексту */
+    height: 100%; /* Висота тіла сторінки на 100% */
+    min-height: 100vh; /* Мінімальна висота на 100% від вікна перегляду */
+    box-sizing: border-box; /* Враховує padding і border у розмірах елементів */
 }
 
 @media (max-width: 768px) {
     body {
-        background-size: cover; /* На маленьких екранах зображення буде покривати екран */
+        background-attachment: fixed; /* На мобільних пристроях фон залишається фіксованим */
     }
 }
 
 @media (max-width: 480px) {
     body {
-        background-size: cover; /* Зображення покриває екран навіть на дуже малих екранах */
+        background-attachment: scroll; /* Для дуже маленьких екранів (мобільні) фон не фіксований, щоб уникнути проблем з прокручуванням */
     }
 }
+
 
         h1 {
             font-family: 'Georgia', sans-serif;
@@ -232,13 +236,22 @@
     <h2>Kontakt</h2>
     <div class="contact-info">
         <div>
-            <h3>Adres:</h3><p> ul. Krzemieniecka 41, Wrocław</p>
+            <h3>Adres:</h3><p> ul. Krzemieniecka 41, 54-612 Wrocław</p>
+            
+        </div>
+        <div>
+            <h3>NIP:</h3><p> 894 32 54 735</p>
+            
+        </div>
+        <div>
+            <h3>Regon:</h3><p> 540883352</p>
+            
         </div>
        <div>
-    <h3>Telefon:</h3><p><a href="tel:+48575047865" style="color: black; text-decoration: underline;">+48 575 047 865</a></p>
+    <h3>Telefon:</h3><p><a href=" tel:+48575047865" style="color: black; text-decoration: underline;">+48 575 047 865</a></p>
 </div>
         <div>
-            <h3>Email: </h3><p><a href="mailto:antach_77@ukr.net" style="color: black; text-decoration: underline;">antach_77@ukr.net</a></p>
+            <h3>Email: </h3><p><a href="mailto:asautoserwissc@gmail.com" style="color: black; text-decoration: underline;">asautoserwissc@gmail.com</a></p>
         </div>
     </div>
 
